@@ -6,7 +6,3 @@ def index(request):
 # Create your views here.
 
 # Django views.py
-
-def input(request):
-    # Your logic to fetch and process the dataset
-    input = {}
