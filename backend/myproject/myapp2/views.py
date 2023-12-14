@@ -1,18 +1,24 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
-
-import pandas as pd
-df=pd.read_csv("m.land_dataset.csv")
+import pandas as pd,os
+import geopandas as gpd
+csv_file_path = os.path.join('myapp2','utils', "m.land_dataset.csv")
+df=pd.read_csv(csv_file_path)
 
 class search(APIView):
     permission_classes = [AllowAny]
 
-    def post(self, request):
-        input_value = request.data.get('input')
-        place = input_value
-        df2=df[df["District"]==place]
-        polygon=df2["polygon"]
+    def get(self, request):
+        print(request.data)
+        place = request.GET['input']
+        print(place)
+        
+        district_data = df[df["District"]==place]
+        polygon=district_data[["polygon", "Land Record ID"]]
+        polygon.to_
+        print(polygon)
+        
 
 
-        return Response({'data': input_value**2})
+        return Response({'data': polygon})
