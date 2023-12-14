@@ -1,9 +1,11 @@
 import React, {useState} from "react";
+import Map from "./Map";
 import axios from "axios";
-import Cookies from 'js-cookie';
+
 
 function Main() {
     const [postData, setPostData] = useState({data: ''});
+    const [fetchedData, setFetchedData] = useState({});
     
     const handleChange = (e) => {
         const data = e.target.value;
@@ -15,18 +17,16 @@ function Main() {
 
     const postDataToServer = async () => {
         try {
-            const url = 'http://localhost:8000/input/'; // Replace with your API endpoint
-            const data = postData; // Your POST data
+            const url = 'http://localhost:8000/input/';
+            const data = postData;
     
-            // First, make a GET request to an endpoint that sets the CSRF cookie
             const responseGet = await axios.get(url);
+
             
-            // Then, get the CSRF token from the 'csrftoken' cookie
             const csrftoken = responseGet.headers['set-cookie']
                 .map(cookie => cookie.split('; ')[0])
                 .find(cookie => cookie.startsWith('csrftoken='));
     
-            // Finally, make the POST request with the CSRF token
             const responsePost = await axios({
                 method: 'post',
                 url: url,
@@ -36,8 +36,9 @@ function Main() {
                 }
             });
     
-            console.log(responsePost); // Use responsePost instead of response
-            console.log(responsePost.data); // Use responsePost instead of response
+            setFetchedData(responsePost.data);
+            console.log(responsePost);
+            console.log(responsePost.data);
         } catch (error) {
             console.log(error);
         }
@@ -61,6 +62,7 @@ function Main() {
                     </button>
                 </div>
             </div>
+            <Map data={fetchedData.data}/>
         </div>
     )
 }

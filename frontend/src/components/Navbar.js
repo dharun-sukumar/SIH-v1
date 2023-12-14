@@ -5,7 +5,7 @@ function Navbar() {
         <div>
             <div className="navbar">
                 <div className="left">
-                    Navbar
+                    Yoga Broker
                 </div>
                 <div className="right">
                     <a href="/">Home</a>
