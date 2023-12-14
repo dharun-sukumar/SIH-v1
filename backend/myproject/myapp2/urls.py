@@ -1,7 +1,6 @@
 from django.urls import path
-from .views import SquareNumberView
+from .views import search
 
 urlpatterns = [
-    path('input/', SquareNumberView.as_view(), name='square-number'),
-    # Other URL patterns
+    path('search/', search.as_view(), name='square-number'),
 ]

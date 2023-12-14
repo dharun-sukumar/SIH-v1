@@ -1,6 +1,6 @@
 import React from "react";
 
-function Map() {
+function Map(props) {
     return(
         <div className="search">
             {this.props.data}

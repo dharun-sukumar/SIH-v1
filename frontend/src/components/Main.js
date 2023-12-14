@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import axios from "axios";
+import Map from "./Map";
 
 function Main() {
     const [input, setInput] = useState('');
@@ -11,7 +11,7 @@ function Main() {
 
     const handleSubmit = async () => {
         try {
-          const response = await fetch('http://localhost:8000/input/', {
+          const response = await fetch('http://localhost:8000/search/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -19,13 +19,13 @@ function Main() {
             body: JSON.stringify({ input: parseInt(input) }),
           });
           const data = await response.json();
-          setOutput(data.output);
+          setOutput(data.data);
           console.log(data);
         } catch (error) {
           console.error('Error:', error);
         }
       };
-
+      console.log(output)
     return(
         <div className="main">
              <div className="background">
@@ -44,6 +44,7 @@ function Main() {
                     </button>
                 </div>
             </div>
+            <Map data={output}/>
         </div>
     )
 }
