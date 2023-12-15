@@ -1,16 +1,7 @@
 Land Record ID,Location,Area(sq ft),Type of Land,Current Usage,Ownership Type,Lease Information,Legal Status,Zoning Information,Easements,Adjacent Land Details,Latitude,Longitude,Recent Valuation,Relevant Documents,polygon,,state,District,current usage,Soil Quality,Water level,Land elevation ,MSL
 GLIS1233,vilage,82265.55,agricultural,farming,government,ABC agri ltd,no disputes,agriculture zone,none,district highway,11.080446,77.001591,3 crores,lease agreement,"77.00028781059154, 11.0803107555833,77.00032843956001, ,11.07975255273253,77.00144573618769,11.079682777301002,77.00134679260685,11.080292109754183,77.00028781059154,11.080310755583383",,Tamilnadu,Coimbatore,Commercial land,1,7,11,2
 GLIS1234,town,96532.69,residental,empty,government,null,no disputes,residental zone,none,educational institutions,11.083155,77.002651,2.5 crores,district highway," 77.00452041210212, 11.084496776167597,77.00438836795456,11.083769129083507,77.0054244066464,11.08368938682672,77.0053329914673,11.084566550450845,77.00452041210212,11.084496776167597",,Tamilnadu,Coimbatore,Residential land,3,6,2,3
-GLIS1235,town,257612.77,residental,empty,government,null,no disputes,residental zone,none,district highway,11.080364,76.99415,1.5 crores,survey map," 76.9934186841873, 11.079772040758229,   76.99345931315577, 11.078276849404446, 76.9947492828984, 11.078246945499288,76.99475944014051,  11.079762072841149, 76.9934186841873, 11.079772040758229
-             
-            
-            
-            
-            
-              
-            
-           
-                           ",,Tamilnadu,Coimbatore,industrial land,5,8,5,2
+GLIS1235,town,257612.77,residental,empty,government,null,no disputes,residental zone,none,district highway,11.080364,76.99415,1.5 crores,survey map," 76.9934186841873, 11.079772040758229,76.99345931315577, 11.078276849404446, 76.9947492828984, 11.078246945499288,76.99475944014051,  11.079762072841149, 76.9934186841873, 11.079772040758229",,Tamilnadu,Coimbatore,industrial land,5,8,5,2
 GLIS1236,village,151719.33,commerical,industry,government,ABC industry.ltd,no disputes,commerical zone,none,educational institutions,11.08294,76.996079,4 crores,Environmental clearance certificate,"76.99641714231325, 11.085738911407148, 76.99642967185031, 11.084829025025314,76.99775780277497, 11.085148715157814, 76.99778286184915, 11.085972530426446,76.99641714231325,11.085738911407148",,Tamilnaddu,Coimbatore,agricultural land,2,5,9,3
 GLIS1237,town,94848.15,commerical,empty,government,null,no disputes,commerical zone,none,educational institutions,11.088965,76.994037,3 crores,survey map,"76.99432476243982,11.089931685445734,76.99445005780922, 11.088468509375602,76.99478835530886,11.088370144335272, 76.99496376882655,11.089882503175488, 76.99432476243982,11.089931685445734",,Tamilnadu,Coimbatore,non agricultural land,5,6,1,1
 GLIS1238,town,68992.6,residental,empty,government,null,no disputes,residental zone,none,district highway,11.094458,76.995845,4 crores,Environmental clearance certificate,"76.9946927636567, 11.09667857516699, 76.9946927636567,  11.096432669412238,76.99466770458258,11.09633430705182,  76.9962088376347,  11.096383488236171,76.99607101272824, 11.09676464213203,  76.9946927636567,11.09667857516699",,Tamilnadu,Coimbatore,Forest,1,8,4,3

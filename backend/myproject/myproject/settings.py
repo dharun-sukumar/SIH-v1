@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'myapp',
     'myapp2',
+    'adminapp',
 
 ]
 
@@ -87,6 +88,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+AUTH_USER_MODEL = 'adminapp.CustomUser'
+
 
 
 # Password validation
