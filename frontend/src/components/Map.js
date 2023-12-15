@@ -1,11 +1,13 @@
-import React from "react";
+// import React, { useState, useEffect } from 'react';
 
-function Map(props) {
-    return(
-        <div className="search">
-            {this.props.data}
+
+function Map({data}) {
+    return (
+        <div>
+        <h1>Result Page</h1>
+        {/* <p>Result:</p> */}
         </div>
-    )
+    );
 }
 
 export default Map;

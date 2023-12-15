@@ -1,31 +1,30 @@
 import React, {useState} from "react";
-import Map from "./Map";
+import axios from "axios";
+// import Map from "./Map";
 
 function Main() {
-    const [input, setInput] = useState('');
-    const [output, setOutput] = useState('');
-
-    const handleInputChange = (e) => {
-        setInput(e.target.value);
-      };
-
-    const handleSubmit = async () => {
-        try {
-          const response = await fetch('http://localhost:8000/search/', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ input: parseInt(input) }),
-          });
-          const data = await response.json();
-          setOutput(data.data);
-          console.log(data);
-        } catch (error) {
-          console.error('Error:', error);
+    const [district, setDistrict] = useState('');
+    const [responseData, setResponseData] = useState(null);
+  
+    const handleInputChange = (event) => {
+      setDistrict(event.target.value);
+    };
+  
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http:/localhost:8000/search/', {
+          params: { input: district }
+        });
+  
+        if (response.status === 200) {
+          setResponseData(response.data);
+        } else {
+          console.error('Failed to retrieve data. Status code:', response.status);
         }
-      };
-      console.log(output)
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
     return(
         <div className="main">
              <div className="background">
@@ -39,12 +38,14 @@ function Main() {
                             Place Name : 
                             <input type="text" name="search" placeholder="Search" onChange={handleInputChange}/>
                     </div>
-                    <button className="search-btn" onClick={handleSubmit}>
+                    <button className="search-btn" onClick={fetchData}>
                         Search
                     </button>
                 </div>
             </div>
-            <Map data={output}/>
+            {responseData && (
+          <pre>{JSON.stringify(responseData, null, 2)}</pre>
+        )}
         </div>
     )
 }
