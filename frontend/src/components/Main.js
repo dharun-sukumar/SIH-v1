@@ -12,7 +12,7 @@ function Main() {
   
     const fetchData = async () => {
       try {
-        const response = await axios.get('http:/localhost:8000/search/', {
+        const response = await axios.get('http://localhost:8000/search/', {
           params: { input: district }
         });
   
