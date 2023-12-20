@@ -34,6 +34,7 @@
 .main {
     height: 90vh;
     bottom: 0;
+    overflow: hidden;
 }
 
 .main .background {
@@ -111,4 +112,43 @@
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-}   
+}
+
+.analytics {
+    top: 5%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.railway, .airport, .bus, .total-area, .population {
+    padding: 10px;
+    border: 2px solid black; 
+    width: 15vw;
+    height: 10vh;
+    border-radius: 6px;
+}
+
+.analytics-container {
+    display: flex;
+    margin: 10vh;
+    justify-content: space-around;
+}
+
+.distributed-column-chart {
+    width: 50%;
+}
+
+.donut-chart {
+    margin-top: 5vh;
+    width: 40%;
+    height: 40vh;
+}
+
+.solution {
+    position: relative;
+    left: 60%;
+    top: -25vh
+}

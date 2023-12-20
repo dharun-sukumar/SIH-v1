@@ -15,7 +15,7 @@ class search(APIView):
         print(place)
         
         district_data = df[df["District"]==place]
-        polygon=district_data[["polygon", "Land Record ID"]].to_dict()
+        polygon=district_data[["polygon"]].to_dict()
         
         print(polygon)
 

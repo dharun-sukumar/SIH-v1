@@ -46,7 +46,6 @@ function Main() {
                     </button>
                 </div>
             </div>
-            {/* <Map polygonData={responseData} /> */}
         </div>
     );
 }
